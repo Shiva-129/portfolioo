@@ -13,9 +13,11 @@ interface RotatingTextProps {
   staggerDuration?: number;
   splitLevelClassName?: string;
   transition?: {
-    type: string;
-    damping: number;
-    stiffness: number;
+    type?: "spring" | "tween";
+    damping?: number;
+    stiffness?: number;
+    // allow additional framer-motion transition properties
+    [key: string]: any;
   };
   rotationInterval?: number;
 }

@@ -9,7 +9,8 @@
     "deploy": "gh-pages -d out",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "postbuild": "node -e \"require('fs').writeFileSync('out/.nojekyll', '')\""
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
